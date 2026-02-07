@@ -1,0 +1,113 @@
+img { max-width: 100%; height: auto; }
+section {
+  scroll-margin-top: 90px;
+}
+html {
+  scroll-behavior: smooth;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; color: #111827; }
+a { color: inherit; }
+
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+.header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+.brand h1 { margin: 0; font-size: 1.25rem; }
+.brand p { margin: 2px 0 0; opacity: .75; font-size: .95rem; }
+.nav { margin-top: 10px; }
+.nav a { margin-right: 12px; text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; }
+
+.hero { padding: 42px 0; }
+.hero h2 { margin-top: 0; font-size: 2rem; }
+.btn { display: inline-block; margin-top: 10px; padding: 10px 14px; border: 1px solid #111827; border-radius: 12px; text-decoration: none; }
+
+.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.cards li { border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px; }
+
+.steps { padding-left: 18px; }
+.contact .big { font-size: 1.1rem; }
+
+.footer { border-top: 1px solid #e5e7eb; padding: 18px 0; margin-top: 40px; opacity: .9; }
+.footer a { text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 110px; }
+.nav a.active {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 0;
+  z-index: 1000; /* <- wichtig: Header bleibt klickbar */
+}
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+.header {
+  z-index: 1000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px;
+  padding: 48px 0;
+}
+.nav a {
+  color: #6b7280;        /* grau */
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #000;
+}
+
+.page-home .nav a[href="./index.html"],
+.page-leistungen .nav a[href="./leistungen.html"],
+.page-ablauf .nav a[href="./ablauf.html"],
+.page-kontakt .nav a[href="./kontakt.html"] {
+  color: #000;           /* SCHWARZ */
+  font-weight: 600;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .header .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav a {
+    padding: 8px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .wrap { padding: 0 14px; }
+  section { padding: 28px 0; }
+}
