@@ -67,6 +67,7 @@ a { color: inherit; }
 }
 
 .page-home .nav a[href="./index.html"],
+.page-kontakt .nav a[href="./übermich.html"],
 .page-leistungen .nav a[href="./leistungen.html"],
 .page-ablauf .nav a[href="./ablauf.html"],
 .page-preise .nav a[href="./preise.html"],
@@ -79,10 +80,18 @@ a { color: inherit; }
 
 /* Mobile Nav */
 @media (max-width: 600px) {
-  .header .wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .nav {
+    flex-wrap: wrap !important;
+    width: 100%;
   }
+
+  .nav a {
+    flex: 1 1 45%;
+    min-width: 0;              /* wichtig gegen Überlauf */
+    justify-content: center;
+  }
+}
+html, body {
+  overflow-x: hidden;
 }
 
