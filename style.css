@@ -67,7 +67,7 @@ a { color: inherit; }
 }
 
 .page-home .nav a[href="./index.html"],
-.page-kontakt .nav a[href="./übermich.html"],
+.page-übermich .nav a[href="./übermich.html"],
 .page-leistungen .nav a[href="./leistungen.html"],
 .page-ablauf .nav a[href="./ablauf.html"],
 .page-preise .nav a[href="./preise.html"],
@@ -94,4 +94,3 @@ a { color: inherit; }
 html, body {
   overflow-x: hidden;
 }
-
