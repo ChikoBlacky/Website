@@ -86,11 +86,53 @@ a { color: inherit; }
   }
 
   .nav a {
-    flex: 1 1 45%;
+    flex: 1 1 calc(50% - 12px);
     min-width: 0;              /* wichtig gegen Überlauf */
     justify-content: center;
   }
+
 }
-html, body {
-  overflow-x: hidden;
+/* Anfrage-Formular – absolut mobil-sicher */
+.anfrage-form {
+  max-width: 560px;
+  margin-top: 18px;
+
+  display: flex;
+  flex-direction: column; /* IMMER untereinander */
+  gap: 16px;
+}
+
+/* Label + Feld immer vertikal */
+.anfrage-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+}
+
+/* Alle Felder volle Breite */
+.anfrage-form input,
+.anfrage-form textarea {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  font: inherit;
+  font-weight: 400;
+}
+
+/* Textarea */
+.anfrage-form textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.5;
+}
+
+/* Button */
+.anfrage-form .btn,
+.anfrage-form button {
+  width: 100%;
 }
