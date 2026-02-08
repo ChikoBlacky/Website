@@ -26,6 +26,9 @@ body {
 main {
   flex: 1;
 }
+body {
+  overflow-x: hidden;
+}
 
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; color: #111827; }
@@ -150,13 +153,21 @@ section { scroll-margin-top: 120px; padding: 48px 0; }
 
 /* Mobile */
 @media (max-width: 600px) {
-  .header .wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .nav {
+    flex-wrap: wrap;       /* darf umbrechen */
+    white-space: normal;   /* wichtig */
   }
-  .hero h2 { font-size: 1.6rem; }
-  .cards { grid-template-columns: 1fr; }
-  .wrap { padding: 0 14px; }
-  section { padding: 28px 0; }
+
+  .nav a {
+    flex: 1 1 auto;        /* Buttons verteilen sich */
+    justify-content: center;
+  }
 }
+@media (max-width: 600px) {
+  .nav a {
+    min-width: 120px;
+  }
+}
+
+
+
