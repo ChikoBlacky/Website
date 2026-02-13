@@ -77,33 +77,38 @@ a { color: inherit; }
 .about-section {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
 .about-img {
-  width: 100%;
-  max-width: 280px;   /* maximale Größe am Laptop */
+  width: 280px;     /* feste Größe */
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
+
+.about-text {
+  max-width: 600px;
+}
+
 /* Mobile Nav */
-@media (max-width: 250px) {
-  .nav {
-    flex-wrap: wrap !important;
-    width: 100%;
+@media (max-width: 768px) {
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
   }
 
-  .nav a {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 0;              /* wichtig gegen Überlauf */
-    justify-content: center;
+  .about-img {
+    width: 220px;
   }
 
-/* Über mich – Mobile Bild Fix */
+}
 
-  }
 
 /* Anfrage-Formular – absolut mobil-sicher */
 .anfrage-form {
