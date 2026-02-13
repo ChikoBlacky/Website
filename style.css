@@ -74,7 +74,7 @@ a { color: inherit; }
 }
 
 /* Mobile Nav */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .nav {
     flex-wrap: wrap !important;
     width: 100%;
@@ -87,6 +87,21 @@ a { color: inherit; }
   }
 
 }
+
+/* Über mich – Mobile Bild Fix */
+@media (max-width: 768px) {
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 250px;
+  }
+
+}
+
 /* Anfrage-Formular – absolut mobil-sicher */
 .anfrage-form {
   max-width: 560px;
