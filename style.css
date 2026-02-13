@@ -83,12 +83,18 @@ a { color: inherit; }
 }
 
 .about-img {
-  width: 280px;     /* feste Größe */
-  max-width: 100%;
+  flex: 0 0 auto;        /* verhindert Strecken im Flex */
+  width: 260px;          /* feste Größe */
   height: auto;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
 
 .about-text {
   max-width: 600px;
@@ -104,10 +110,11 @@ a { color: inherit; }
   }
 
   .about-img {
-    width: 220px;
+    width: 200px;
   }
 
 }
+
 
 
 /* Anfrage-Formular – absolut mobil-sicher */
