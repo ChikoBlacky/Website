@@ -3,12 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bianca Kinderanimation</title>
+  <title>Bianca´s Kinderanimation</title>
   <meta name="description" content="Kinderanimation für Geburtstage und Events: Spiele, Schminken, Ballonfiguren und mehr." />
-<link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 
 <body class="page-home">
+
+  <!-- WELCOME SCREEN -->
+  <div id="welcome-screen">
+    <div class="welcome-box">
+      <!-- LOGO -->
+      <img src="20260212_134549732.png" alt="Bianca Kinderanimation Logo">
+
+    
+      <h2>Willkommen bei</h2>
+      <h1 class="welcome-title">Kinderanimation mit Bianca</h1>
+      <button type="button" class="btn" onclick="enterSite()">Website betreten</button>
+    </div>
+  </div>
+
+  <!-- NORMALER INHALT -->
   <header class="header">
     <div class="wrap">
       <div class="brand">
@@ -16,24 +31,14 @@
         <p>Kinderanimation für Geburtstage & Events</p>
       </div>
 
-         <nav class="nav">
-            <a href="./index.html">Start</a>
-            <a href="./uebermich.html">Über mich</a>
-            <a href="./leistungen.html">Leistungen</a>
-            <a href="./ablauf.html">Ablauf</a>
-            <a href="./preise.html">Preise</a>
-             <a href="./kontakt.html">Kontakt</a>
-        </nav>
+      <nav class="nav">
+        <a href="./uebermich.html">Über mich</a>
+        <a href="./leistungen.html">Leistungen</a>
+        <a href="./ablauf.html">Ablauf</a>
+
+      </nav>
     </div>
   </header>
-
-  <main class="wrap">
-    <section class="hero">
-      <h2>Im Aufbau 🎈</h2>
-      <p>Derzeit befindet sich die Seite im Aufbau</p>
-    </section>
-  </main>
-
   <footer class="footer">
     <div class="wrap">
       <small>© <span id="year"></span> Bianca Kinderanimation •
@@ -45,6 +50,11 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+  function enterSite() {
+  window.location.href = "uebermich.html"; 
+    }
   </script>
+
 </body>
 </html>

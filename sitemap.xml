@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url><loc>https://www.biancas-kinderanimation.at/</loc></url>
-  <url><loc>https://www.biancas-kinderanimation.at/uebermich.html</loc></url>
-  <url><loc>https://www.biancas-kinderanimation.at/leistungen.html</loc></url>
-  <url><loc>https://www.biancas-kinderanimation.at/ablauf.html</loc></url>
-  <url><loc>https://www.biancas-kinderanimation.at/preise.html</loc></url>
-  <url><loc>https://www.biancas-kinderanimation.at/kontakt.html</loc></url>
-  <url><loc>https://www.biancas-kinderanimation.at/anfrage.html</loc></url>
-
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/</loc>
+  </url>
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/uebermich.html</loc>
+  </url>
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/leistungen.html</loc>
+  </url>
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/ablauf.html</loc>
+  </url>
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/preise.html</loc>
+  </url>
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/kontakt.html</loc>
+  </url>
+  <url>
+    <loc>https://www.biancas-kinderanimation.at/anfrage.html</loc>
+  </url>
 </urlset>
-

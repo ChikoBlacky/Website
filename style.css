@@ -27,11 +27,10 @@ a { color: inherit; }
 .header {
   position: sticky;
   top: 0;
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 14px 0;
-  z-index: 1000;
+  background: transparent;   /* statt weiß */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
 
 .brand h1 { margin: 0; font-size: 1.25rem; }
 .brand p { margin: 2px 0 0; opacity: .75; font-size: .95rem; }
@@ -65,14 +64,10 @@ a { color: inherit; }
   color: #000;
   border-color: #e5e7eb;
 }
-
-.page-home .nav a[href="./index.html"],
 .page-übermich .nav a[href="./übermich.html"],
 .page-leistungen .nav a[href="./leistungen.html"],
-.page-ablauf .nav a[href="./ablauf.html"],
-.page-preise .nav a[href="./preise.html"],
-.page-kontakt .nav a[href="./kontakt.html"],
-.page-anfrage .nav a[href="./anfrage.html"] {
+.page-kontakt .nav a[href="./kontakt.html"]
+ {
   color: #000;
   border-color: #111827;
   background: #f8fafc;
@@ -135,4 +130,118 @@ a { color: inherit; }
 .anfrage-form .btn,
 .anfrage-form button {
   width: 100%;
+}
+
+/* ============================= */
+/* Welcome Screen */
+/* ============================= */
+
+#welcome-screen{
+  position: fixed;
+  inset: 0;
+  background: #f1f5f9;      /* KEIN background-image hier */
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+}
+
+/* WELCOME SCREEN */
+#welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.welcome-box {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+}
+
+/* Bild */
+.welcome-logo {
+  width: 260px;      /* FIXE Größe */
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Willkommen Text */
+.welcome-sub {
+  font-size: 0.95rem;
+  margin: 0 0 4px 0;
+  opacity: .7;
+}
+
+/* Haupttitel */
+.welcome-title {
+  font-size: 1.6rem;   /* NICHT riesig */
+  margin: 0 0 14px 0;
+}
+
+/* Button */
+.welcome-btn {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.title-with-balloon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;              /* Abstand zwischen Text und Ballon */
+}
+
+.balloon {
+  font-size: 1.2em;      /* passt sich dem Text an */
+}
+
+/* Globaler Hintergrund für alle Seiten */
+body {
+  background-image: url("hintergrund.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Über mich Layout */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 250px;
+  }
 }
