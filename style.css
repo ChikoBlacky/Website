@@ -90,14 +90,21 @@ a { color: inherit; }
 
 /* Über mich – Mobile Bild Fix */
 
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-  .about-img {
-    width: 250px;
-  }
+.about-img {
+  width: 100%;
+  max-width: 350px;   /* maximale Größe am Laptop */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
   }
 
 /* Anfrage-Formular – absolut mobil-sicher */
