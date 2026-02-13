@@ -225,5 +225,8 @@ body {
   background: transparent; /* damit html-Hintergrund sichtbar bleibt */
 }
 
+html, body {
+  overscroll-behavior: none;
+}
 
 
