@@ -211,32 +211,19 @@ html, body {
   min-height: 100%;
 }
 
-body {
-  background: transparent !important;
-  position: relative;
-}
-
-/* Hintergrund als eigene Ebene */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
+/* ===== Hintergrund: mobil-sicher (kein Schwarz beim Scrollen) ===== */
+html {
+  background-color: #f1f5f9; /* Fallback statt schwarz */
   background-image: url("hintergrund.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* verhindert schwarzes Flackern auf Android */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: transform;
+  background-attachment: scroll; /* wichtig für Mobile */
 }
 
-/* Fallback-Farbe falls kurz lädt */
-html {
-  background-color: #f1f5f9;
+body {
+  background: transparent; /* damit html-Hintergrund sichtbar bleibt */
 }
+
 
 
