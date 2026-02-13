@@ -74,22 +74,6 @@ a { color: inherit; }
   border-color: #111827;
   background: #f8fafc;
 }
-
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .nav {
-    flex-wrap: wrap !important;
-    width: 100%;
-  }
-
-  .nav a {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 0;              /* wichtig gegen Überlauf */
-    justify-content: center;
-  }
-
-/* Über mich – Mobile Bild Fix */
-
 .about-section {
   display: flex;
   align-items: center;
@@ -104,6 +88,20 @@ a { color: inherit; }
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap !important;
+    width: 100%;
+  }
+
+  .nav a {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 0;              /* wichtig gegen Überlauf */
+    justify-content: center;
+  }
+
+/* Über mich – Mobile Bild Fix */
 
   }
 
