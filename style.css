@@ -86,8 +86,6 @@ a { color: inherit; }
     justify-content: center;
   }
 
-}
-
 /* Über mich – Mobile Bild Fix */
 
   .about-section {
@@ -97,6 +95,7 @@ a { color: inherit; }
 
   .about-img {
     width: 250px;
+  }
   }
 
 /* Anfrage-Formular – absolut mobil-sicher */
@@ -210,6 +209,7 @@ a { color: inherit; }
 html {
   background-color: #f1f5f9;
   background-image:
+
     url("hintergrund.jpg");
   background-size: cover;
   background-position: center;
