@@ -3,12 +3,11 @@ img { max-width: 100%; height: auto; }
 
 html { scroll-behavior: smooth; }
 
-html, body { height: 100%; }
+html, body { height: auto; min-height: 100%; }
 
 body {
   margin: 0;
-  min-height: 100vh;
-  min-height: 100svh;      /* mobile stabil */
+  min-height: 100dvh;     /* besser als 100vh auf Mobile */
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -16,7 +15,10 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   color: #111827;
+
+  background: transparent;
 }
+
 
 main { flex: 1; }
 
@@ -208,14 +210,13 @@ a { color: inherit; }
 
 html {
   background-color: #f1f5f9;
-  background-image:
-
-    url("hintergrund.jpg");
+  background-image: url("hintergrund.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body { background: transparent; }
+
 
 
