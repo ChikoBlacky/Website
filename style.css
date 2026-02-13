@@ -207,26 +207,15 @@ a { color: inherit; }
 /* 100% stabiler Mobile Background */
 /* ============================= */
 
-html, body {
-  min-height: 100%;
-}
-
-/* ===== Hintergrund: mobil-sicher (kein Schwarz beim Scrollen) ===== */
 html {
-  background-color: #f1f5f9; /* Fallback statt schwarz */
-  background-image: url("hintergrund.jpg");
+  background-color: #f1f5f9;
+  background-image:
+    url("hintergrund.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll; /* wichtig für Mobile */
 }
 
-body {
-  background: transparent; /* damit html-Hintergrund sichtbar bleibt */
-}
-
-html, body {
-  overscroll-behavior: none;
-}
+body { background: transparent; }
 
 
