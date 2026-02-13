@@ -203,41 +203,22 @@ a { color: inherit; }
   font-size: 1.2em;      /* passt sich dem Text an */
 }
 
-/* Globaler Hintergrund für alle Seiten */
-body {
+/* Hintergrund: stabil auf Mobile */
+html {
   background-image: url("hintergrund.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll; /* wichtig */
 }
 
-/* Über mich Layout */
-.about-section {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+body {
+  background: transparent; /* body darf KEIN eigenes Bild haben */
 }
 
-.about-img {
-  width: 320px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-/* Mobile */
+/* Falls du irgendwo "background-attachment: fixed" hast -> NIE auf Mobile */
 @media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-img {
-    width: 250px;
+  html {
+    background-attachment: scroll !important;
   }
 }
