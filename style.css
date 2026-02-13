@@ -89,7 +89,7 @@ a { color: inherit; }
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 /* Mobile Nav */
-@media (max-width: 768px) {
+@media (max-width: 250px) {
   .nav {
     flex-wrap: wrap !important;
     width: 100%;
