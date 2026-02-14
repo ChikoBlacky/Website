@@ -330,6 +330,9 @@ body { background: transparent; }
   .about-content {
     width: 100%;
   }
+  .about-img {
+    border-radius: 18px;
+  }
 }
 
 
