@@ -307,20 +307,31 @@ body { background: transparent; }
 /* Mobile Header */
 /* ============================= */
 
-@media (max-width: 900px) {
-
-  .header .wrap {
+/* Mobile: Bild oben, Text unten */
+@media (max-width: 768px) {
+  .about-card {
     flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    align-items: stretch;
   }
 
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .about-media {
+    flex: none;
+    width: 100%;
   }
 
+  .about-img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;      /* optional */
+    object-fit: cover;       /* optional */
+    display: block;
+  }
+
+  .about-content {
+    width: 100%;
+  }
 }
+
 
 .page-content { padding: 40px 0; }
 
