@@ -94,19 +94,7 @@ a { color: inherit; }
 .page-leistungen .nav a[href="./leistungen.html"],
 .page-übermich .nav a[href="./uebermich.html"] {
   background: #0f172a;
-  color: white;
 }
-
-
-.page-übermich .nav a[href="./übermich.html"],
-.page-leistungen .nav a[href="./leistungen.html"],
-.page-preise .nav a[href="./feedback.html"]
- {
-  color: #000;
-  border-color: #111827;
-  background: #f8fafc;
-}
-
 
 
 .about-text {
@@ -396,29 +384,24 @@ select{
   }
 }
 
-.nav a:active {
-  color: black;
-}
-.nav a {
-  color: #555;
+/* NAV Basis */
+.nav a{
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
   text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-/* Hover Effekt */
-.nav a:hover {
-  color: black;
-}
-
-/* Aktiver Menüpunkt */
-.nav a.active {
-  color: black;
+  color: #333;
   font-weight: 600;
 }
 
-.nav a:active {
-  color: black;
+/* Active = gleiche Optik wie "Über mich" */
+.nav a.active{
+  background: #0f172a;   /* dunkel */
+  color: #fff !important;
+}
+
+/* Optional: Hover */
+.nav a:hover{
+  background: rgba(15, 23, 42, 0.08);
 }
 

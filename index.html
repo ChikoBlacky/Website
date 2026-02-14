@@ -33,11 +33,12 @@
         <p>Kinderanimation für Geburtstage & Events</p>
       </div>
 
-      <nav class="nav">
-        <a href="./uebermich.html">Über mich</a>
-        <a href="./leistungen.html">Leistungen</a>
-        <a href="./feedback.html">Feedback</a>
-      </nav>
+ <nav class="nav">
+  <a href="#about">Über mich</a>
+  <a href="#services">Leistungen</a>
+  <a href="#feedback">Feedback</a>
+</nav>
+
     </div>
   </header>
   <footer class="footer">
@@ -55,6 +56,15 @@
   function enterSite() {
   window.location.href = "uebermich.html"; 
     }
+const links = document.querySelectorAll('.nav a');
+
+links.forEach(link => {
+  link.addEventListener('click', function() {
+    links.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
   </script>
 
 </body>

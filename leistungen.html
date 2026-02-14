@@ -69,5 +69,18 @@ Mit kreativen Aufgaben, Hinweisen und einem Schatz am Ende wird eure Feier zu ei
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav a");
+  const current = location.pathname.split("/").pop() || "index.html";
+
+  links.forEach(a => {
+    const href = a.getAttribute("href").split("/").pop();
+    if (href === current) a.classList.add("active");
+    else a.classList.remove("active");
+  });
+});
+</script>
+
 </body>
 </html>
