@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback – Bianca´s Kinderanimation</title>
+  <link rel="stylesheet" href="style.css?v=8" />
+</head>
+
+<body class="page-feedback">
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Bianca´s Kinderanimation</h1>
+        <p>Kinderanimation für Geburtstage & Events</p>
+      </div>
+
+      <nav class="nav">
+        <a href="./uebermich.html">Über mich</a>
+        <a href="./leistungen.html">Leistungen</a>
+        <a href="./feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page-content">
+    <section class="card">
+      <h2>Feedback</h2>
+      <p>Ich freue mich über euren Feedback 💛</p>
+
+      <form class="anfrage-form" onsubmit="sendFeedback(event)">
+        <label>
+          Dein Name (optional)
+          <input id="fb-name" type="text" placeholder="z.B. Lisa">
+        </label>
+
+        <label>
+          Bewertung
+          <select id="fb-stars">
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+          </select>
+        </label>
+
+        <label>
+          Dein Feedback
+          <textarea id="fb-text" required placeholder="Was hat dir besonders gefallen? Was kann ich verbessern?"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Feedback senden</button>
+      </form>
+<hr class="divider">
+
+<h3>Neueste Bewertungen</h3>
+<div id="fb-list" class="fb-list">Lade Feedback…</div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Bianca´s Kinderanimation •
+        <a href="./impressum.html">Impressum</a> •
+        <a href="./datenschutz.html">Datenschutz</a>
+      </small>
+    </div>
+  </footer>
+
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // 1) HIER deine Apps-Script Web-App URL rein:
+  const API_URL = "https://script.google.com/macros/s/AKfycbyqfPRVO3fOA50B8JD0reN_euwnHtWAB_9oHzzaMb7KQHMjzkvju0dTy5Cqkal-XEb6/exec";
+
+  // Form submit
+  async function sendFeedback(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("fb-name").value.trim() || "Anonym";
+    const rating = document.getElementById("fb-stars").value;
+    const message = document.getElementById("fb-text").value.trim();
+
+    if (!message) return;
+
+    await fetch(API_URL, {
+      method: "POST",
+      mode: "no-cors", // wichtig bei Apps Script
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ name, rating, message })
+    });
+
+    document.getElementById("fb-name").value = "";
+    document.getElementById("fb-text").value = "";
+
+    // neu laden
+    loadFeedback();
+  }
+
+  // Feedback laden und anzeigen
+  async function loadFeedback() {
+    const box = document.getElementById("fb-list");
+    box.textContent = "Lade Feedback…";
+
+    try {
+      const res = await fetch(API_URL + "?list=1");
+      const data = await res.json();
+
+      if (!data || !data.items || data.items.length === 0) {
+        box.innerHTML = "<p>Noch keine Bewertungen. Sei die/der Erste 💛</p>";
+        return;
+      }
+
+      box.innerHTML = data.items.map(item => {
+        const stars = "★".repeat(+item.rating) + "☆".repeat(5 - +item.rating);
+        return `
+          <div class="fb-item">
+            <div class="fb-top">
+              <strong>${escapeHtml(item.name)}</strong>
+              <span class="fb-stars">${stars}</span>
+            </div>
+            <div class="fb-text">${escapeHtml(item.message)}</div>
+            <div class="fb-date">${escapeHtml(item.date)}</div>
+          </div>
+        `;
+      }).join("");
+
+    } catch (err) {
+      box.innerHTML = "<p>Feedback konnte nicht geladen werden.</p>";
+    }
+  }
+
+  function escapeHtml(str) {
+    return (str || "").replace(/[&<>"']/g, m => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+    }[m]));
+  }
+
+  // beim Laden direkt anzeigen
+  loadFeedback();
+</script>
+
+
+
+
+</body>
+</html>
