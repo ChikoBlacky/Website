@@ -4,14 +4,6 @@
 
 
 .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
-/* NAV LINKS – aktiv/geklickt schwarz */
-.header a.active,
-.header nav a.active,
-.header .nav a.active,
-.header a[aria-current="page"]{
-  color: #000 !important;
-  font-weight: 700;
-}
 
 
 .header{
@@ -247,7 +239,7 @@ body { background: transparent; }
 }
 
 .about-card {
-  display: flex;
+  display: grid;
   grid-template-columns: 320px 1fr;
   gap: 28px;
 
@@ -426,4 +418,7 @@ select{
   font-weight: 600;
 }
 
+.nav a:active {
+  color: black;
+}
 
