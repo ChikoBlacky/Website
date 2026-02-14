@@ -23,11 +23,19 @@
 
   <main class="wrap">
   <section class="about">
-    <div class="about-card">
-      <div class="about-media">
-              <div class="about-content"></div>
-        <img src="bianca.jpg" alt="Bianca´s Kopetzki – Kinderanimation" class="about-img">
-      </div>
+<div class="about-card">
+
+  <div class="about-media">
+    <img src="bianca.jpg" alt="Bianca Kopetzki – Kinderanimation" class="about-img">
+  </div>
+
+  <div class="about-content">
+    <h2>Über mich</h2>
+    ...
+  </div>
+
+</div>
+
 
       <div class="about-content">
         <h2>Über mich</h2>
@@ -75,8 +83,19 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".header a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+});
+</script>
+
+  
 </body>
 </html>
