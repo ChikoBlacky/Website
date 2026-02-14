@@ -4,6 +4,14 @@
 
 
 .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+/* NAV LINKS – aktiv/geklickt schwarz */
+.header a.active,
+.header nav a.active,
+.header .nav a.active,
+.header a[aria-current="page"]{
+  color: #000 !important;
+  font-weight: 700;
+}
 
 
 .header{
@@ -239,7 +247,7 @@ body { background: transparent; }
 }
 
 .about-card {
-  display: grid;
+  display: flex;
   grid-template-columns: 320px 1fr;
   gap: 28px;
 
@@ -396,5 +404,26 @@ select{
   }
 }
 
+.nav a:active {
+  color: black;
+}
+.nav a {
+  color: #555;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* Hover Effekt */
+.nav a:hover {
+  color: black;
+}
+
+/* Aktiver Menüpunkt */
+.nav a.active {
+  color: black;
+  font-weight: 600;
+}
 
 
