@@ -409,4 +409,10 @@ html, body {
 .nav a:hover{
   background: rgba(15, 23, 42, 0.08);
 }
+.wrap{
+  max-width: 980px;
+  width: 100%;
+  overflow-x: clip;
+}
+
 
