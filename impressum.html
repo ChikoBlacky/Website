@@ -4,48 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impressum – Biancas Kinderanimation</title>
-<link rel="stylesheet" href="style.css?v=10">
 
-
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
-<body class="wrap">
-  <p><a href="uebermich.html">← Zurück</a></p>
-  <p><section id="impressum">
-  <h1>Impressum</h1>
 
-  <p><strong>Angaben gemäß § 5 TMG / § 5 ECG</strong></p>
+<body class="page-legal">
 
-    <p>
-    <strong>Bianca Kopetzki</strong><br>
-    Deimelgasse 5-3
-    2273 Hohenau<br>
-    E-Mail: <a href="mailto:[deine-mail@example.com]">[kinderanimationbianca@gmail.com]</a><br>
-  </p>
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Bianca´s Kinderanimation</h1>
+        <p>Kinderanimation für Geburtstage & Events</p>
+      </div>
 
-  <h2>Tätigkeit</h2>
-  <p>
-    Nebenberufliche Kinderanimation / Eventbetreuung
-  </p>
+      <nav class="nav">
+        <a href="./uebermich.html">Über mich</a>
+        <a href="./leistungen.html">Leistungen</a>
+        <a href="./feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Umsatzsteuer</h2>
-  <p>
-    <!-- Falls zutreffend, sonst diesen Absatz löschen -->
-    Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG / § 19 UStG (es wird keine Umsatzsteuer ausgewiesen).
-  </p>
+  <main class="wrap page-content">
+    <section class="card legal-card">
 
-  <h2>Haftung für Inhalte</h2>
-  <p>
-    Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG / ECG für eigene Inhalte auf diesen Seiten nach den
-    allgemeinen Gesetzen verantwortlich. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
-    übernehmen wir jedoch keine Gewähr.
-  </p>
+      <h2>Impressum</h2>
 
-  <h2>Urheberrecht</h2>
-  <p>
-    Die auf dieser Webseite veröffentlichten Inhalte und Werke unterliegen dem Urheberrecht. Vervielfältigung,
-    Bearbeitung oder Verbreitung bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Rechteinhabers.
-  </p>
-</section>
-.</p>
+      <p><strong>Angaben gemäß § 5 TMG / § 5 ECG</strong></p>
+
+      <h3>Bianca Kopetzki</h3>
+      <p>
+        Deimelgasse 5-3<br>
+        2273 Hohenau<br>
+        E-Mail:
+        <a href="mailto:kinderanimationbianca@gmail.com">
+          kinderanimationbianca@gmail.com
+        </a>
+      </p>
+
+      <h3>Tätigkeit</h3>
+      <p>Nebenberufliche Kinderanimation / Eventbetreuung</p>
+
+      <h3>Umsatzsteuer</h3>
+      <p>
+        Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG / § 19 UStG
+        (es wird keine Umsatzsteuer ausgewiesen).
+      </p>
+
+      <h3>Haftung für Inhalte</h3>
+      <p>
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG / ECG
+        für eigene Inhalte auf diesen Seiten verantwortlich.
+        Für die Richtigkeit, Vollständigkeit und Aktualität
+        übernehmen wir jedoch keine Gewähr.
+      </p>
+
+      <h3>Urheberrecht</h3>
+      <p>
+        Die auf dieser Website veröffentlichten Inhalte unterliegen dem Urheberrecht.
+        Vervielfältigung oder Verbreitung bedürfen der vorherigen schriftlichen Zustimmung.
+      </p>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <small>
+        © <span id="year"></span> Bianca´s Kinderanimation •
+        <a href="./impressum.html">Impressum</a> •
+        <a href="./datenschutz.html">Datenschutz</a> •
+        <a href="./agb.html">AGB</a>
+      </small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
