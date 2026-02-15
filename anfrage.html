@@ -34,33 +34,40 @@
       <h2>Anfrage senden</h2>
       <p class="muted">Schreib mir kurz die wichtigsten Infos (Datum, Ort, Alter & Anzahl der Kinder). Ich melde mich schnellstmöglich bei dir 💛</p>
 
-      <form action="https://formspree.io/f/xreagwyd" method="POST" class="anfrage-form">
-        <label>
-          Name
-          <input type="text" name="name" required placeholder="Vor- und Nachname">
-        </label>
+<form action="https://api.web3forms.com/submit" method="POST" class="anfrage-form">
 
-        <label>
-          E-Mail
-          <input type="email" name="email" required placeholder="name@mail.at">
-        </label>
+  <!-- Dein Access Key -->
+  <input type="hidden" name="access_key" value="293446d4-c99f-42b2-8950-9e93ec963f20">
 
-        <label>
-          Telefon (optional)
-          <input type="tel" name="phone" placeholder="+43 …">
-        </label>
+  <!-- Optional: Betreff -->
+  <input type="hidden" name="subject" value="Neue Anfrage – Bianca´s Kinderanimation">
 
-        <label>
-          Nachricht
-          <textarea name="message" required placeholder="Datum, Ort, Alter der Kinder, Anzahl der Kinder, gewünschte Leistungen…"></textarea>
-        </label>
+  <label>
+    Name
+    <input type="text" name="name" required>
+  </label>
 
-        <input type="hidden" name="_subject" value="Neue Anfrage – Bianca´s Kinderanimation">
+  <label>
+    E-Mail
+    <input type="email" name="email" required>
+  </label>
 
-        <button type="submit" class="btn btn-gradient">Anfrage senden</button>
+  <label>
+    Telefon (optional)
+    <input type="tel" name="phone" placeholder="+43 …">
+  </label>
 
-        <p class="backline"><a href="./uebermich.html">← Zurück zu Über mich</a></p>
-      </form>
+  <label>
+    Nachricht
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+
+  <!-- Spam Schutz -->
+  <input type="checkbox" name="botcheck" style="display:none;">
+
+  <button type="submit" class="btn">Anfrage senden</button>
+</form>
+
     </section>
   </main>
 
