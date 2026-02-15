@@ -94,8 +94,8 @@ a { color: inherit; }
 .page-leistungen .nav a[href="./leistungen.html"],
 .page-übermich .nav a[href="./uebermich.html"] {
   background: #0f172a;
+  color: #fff !important;
 }
-
 
 
 .about-text {
