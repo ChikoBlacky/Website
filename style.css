@@ -90,11 +90,13 @@ a { color: inherit; }
   background: rgba(15,23,42,0.08);
 }
 
-.page-preise .nav a[href="./feedback.html"],
+.page-feedback .nav a[href="./feedback.html"],
 .page-leistungen .nav a[href="./leistungen.html"],
 .page-übermich .nav a[href="./uebermich.html"] {
   background: #0f172a;
+  color: #fff !important;
 }
+
 
 
 .about-text {
@@ -363,6 +365,7 @@ html, body {
 }
 
 /* Mobile: Foto oben, Text unten */
+/* Mobile: Foto oben, Text unten + keine Überbreite */
 @media (max-width: 768px) {
   .about-card{
     display: flex;
@@ -372,16 +375,19 @@ html, body {
     gap: 16px;
     padding: 18px;
     box-sizing: border-box;
+    min-width: 0;
   }
 
   .about-media,
   .about-content{
     width: 100%;
     max-width: 100%;
+    min-width: 0;
   }
 
   .about-img{
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
@@ -399,20 +405,14 @@ html, body {
   font-weight: 600;
 }
 
-/* Active = gleiche Optik wie "Über mich" */
-.nav a.active{
-  background: #0f172a;   /* dunkel */
-  color: #fff !important;
-}
-
 /* Optional: Hover */
 .nav a:hover{
   background: rgba(15, 23, 42, 0.08);
 }
+
 .wrap{
   max-width: 980px;
   width: 100%;
   overflow-x: clip;
 }
-
-
+.about { overflow-x: hidden; }
