@@ -1180,70 +1180,51 @@ html, body{
 /* ============================= */
 
 /* Platz schaffen, damit nichts hinter der Leiste verschwindet */
-body{
-  padding-bottom: 86px; /* Höhe der Footer-Leiste + Luft */
-}
+/* ============================= */
+/* Footer – dezenter & ruhiger   */
+/* ============================= */
 
-/* Footer fest unten */
 .footer{
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-
-  padding: 14px 0;
-  background: transparent; /* Hintergrund macht die Leiste selbst */
+  padding: 22px 0 26px;
+  color: rgba(15,23,42,0.55);   /* weniger Kontrast */
 }
 
-/* Zentrierung */
 .footer .wrap{
   display: flex;
   justify-content: center;
-  padding: 0 16px;
 }
 
-/* Die Leiste selbst */
+/* keine Glas-Box mehr */
 .footer small{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 
-  padding: 12px 18px;
-  border-radius: 16px;
+  padding: 6px 10px;            /* weniger Padding */
+  border-radius: 8px;
 
-  background: rgba(255,255,255,0.70);
-  border: 1px solid rgba(15,23,42,0.10);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+  background: transparent;      /* KEIN weißer Kasten mehr */
+  border: none;                 /* keine Umrandung */
+  box-shadow: none;             /* kein Schatten */
+  backdrop-filter: none;
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  opacity: 0.75;                /* leicht abgeschwächt */
 }
 
-/* Links */
+/* Links ruhiger */
 .footer a{
-  font-weight: 800;
-  color: rgba(15,23,42,0.85);
-  position: relative;
+  font-weight: 600;
+  color: rgba(15,23,42,0.65);
+  text-decoration: none;
+  transition: opacity .2s ease;
 }
 
-/* Hover-Unterstrich (Gradient) */
-.footer a::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:-3px;
-  height:2px;
-  border-radius:999px;
-  background: linear-gradient(90deg, #ec4899, #3b82f6);
-  transform: scaleX(0);
-  transform-origin:left;
-  transition: transform .2s ease;
+.footer a:hover{
+  opacity: 1;
 }
-.footer a:hover::after{ transform: scaleX(1); }
+
 
 /* Mobile: etwas kompakter */
 @media (max-width: 768px){
