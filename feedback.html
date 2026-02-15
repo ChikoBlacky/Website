@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Feedback – Bianca´s Kinderanimation</title>
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 
 <body class="page-feedback">
@@ -141,16 +141,7 @@
   // beim Laden direkt anzeigen
   loadFeedback();
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav a");
-  const current = location.pathname.split("/").pop() || "index.html";
 
-  links.forEach(a => {
-    const href = a.getAttribute("href").split("/").pop();
-    if (href === current) a.classList.add("active");
-  });
-});
 </script>
 
 </body>
