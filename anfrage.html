@@ -85,5 +85,43 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const form = document.getElementById("anfrageForm");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Wird gesendet…";
+    submitBtn.disabled = true;
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Vielen Dank! Deine Anfrage wurde erfolgreich gesendet. Ich melde mich so schnell wie möglich.");
+        form.reset();
+      } else {
+        alert("Fehler: " + (data.message || "Bitte versuche es später erneut."));
+      }
+    } catch (err) {
+      alert("Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.");
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
 </body>
 </html>
