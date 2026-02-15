@@ -3,9 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anfrage – Bianca´s Kinderanimation</title>
-  <link rel="stylesheet" href="style.css?v=7" />
+  <title>Anfrage – Biancas Kinderanimation</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
+
 <body class="page-anfrage">
   <header class="header">
     <div class="wrap">
@@ -13,6 +20,7 @@
         <h1>Bianca´s Kinderanimation</h1>
         <p>Kinderanimation für Geburtstage & Events</p>
       </div>
+
       <nav class="nav">
         <a href="./uebermich.html">Über mich</a>
         <a href="./leistungen.html">Leistungen</a>
@@ -21,54 +29,54 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <h2>Anfrage senden</h2>
-    <p>Schreib mir kurz die wichtigsten Infos (Datum, Ort, Alter & Anzahl der Kinder).</p>
+  <main class="wrap page-content">
+    <section class="card anfrage-card">
+      <h2>Anfrage senden</h2>
+      <p class="muted">Schreib mir kurz die wichtigsten Infos (Datum, Ort, Alter & Anzahl der Kinder). Ich melde mich schnellstmöglich bei dir 💛</p>
 
-    <form action="https://formspree.io/f/xreagwyd" method="POST" class="anfrage-form">
-      <label>
-        Name
-        <input type="text" name="name" required>
-      </label>
+      <form action="https://formspree.io/f/xreagwyd" method="POST" class="anfrage-form">
+        <label>
+          Name
+          <input type="text" name="name" required placeholder="Vor- und Nachname">
+        </label>
 
-      <label>
-        E-Mail
-        <input type="email" name="email" required>
-      </label>
+        <label>
+          E-Mail
+          <input type="email" name="email" required placeholder="name@mail.at">
+        </label>
 
-      <label>
-        Telefon (optional)
-        <input type="tel" name="phone" placeholder="+43 …">
-      </label>
+        <label>
+          Telefon (optional)
+          <input type="tel" name="phone" placeholder="+43 …">
+        </label>
 
-      <label>
-        Nachricht
-        <textarea name="message" rows="6" required></textarea>
-      </label>
+        <label>
+          Nachricht
+          <textarea name="message" required placeholder="Datum, Ort, Alter der Kinder, Anzahl der Kinder, gewünschte Leistungen…"></textarea>
+        </label>
 
-      <input type="hidden" name="_subject" value="Neue Anfrage – Bianca´s Kinderanimation">
+        <input type="hidden" name="_subject" value="Neue Anfrage – Bianca´s Kinderanimation">
 
-      <button type="submit" class="btn">Anfrage senden</button>
-      <p style="margin-top:12px"><a href="./index.html">← Zurück</a></p>
-    </form>
+        <button type="submit" class="btn btn-gradient">Anfrage senden</button>
+
+        <p class="backline"><a href="./uebermich.html">← Zurück zu Über mich</a></p>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">
-  
     <div class="wrap">
-      <small>© <span id="year"></span> Bianca´s Kinderanimation • <a href="./impressum.html">Impressum</a> • <a href="./datenschutz.html">Datenschutz</a></small>
+      <small>
+        © <span id="year"></span> Bianca´s Kinderanimation •
+        <a href="./impressum.html">Impressum</a> •
+        <a href="./datenschutz.html">Datenschutz</a> •
+        <a href="./agb.html">AGB</a>
+      </small>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script>
-  const dateInput = document.getElementById("date");
-  if (dateInput) {
-    const today = new Date().toISOString().split("T")[0];
-    dateInput.min = today;
-  }
-</script>
 </body>
 </html>

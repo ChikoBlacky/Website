@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Über mich – Bianca´s Kinderanimation</title>
- <link rel="stylesheet" href="style.css?v=7" />
+  <title>Über mich – Biancas Kinderanimation</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS (NUR 1x einbinden!) -->
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
+
 <body class="page-übermich">
   <header class="header">
     <div class="wrap">
@@ -13,99 +21,64 @@
         <h1>Bianca´s Kinderanimation</h1>
         <p>Kinderanimation für Geburtstage & Events</p>
       </div>
+
       <nav class="nav">
         <a href="./uebermich.html">Über mich</a>
         <a href="./leistungen.html">Leistungen</a>
         <a href="./feedback.html">Feedback</a>
       </nav>
-        
+    </div>
   </header>
 
   <main class="wrap">
-  <section class="about">
-    <div class="about-card">
-
-      <div class="about-media">
-        <img src="Bianca.jpg" alt="Bianca Kopetzki – Kinderanimation" class="about-img">
-      </div>
-
-      <div class="about-content">
-        <h2>Über mich</h2>
-
-        <p>
-          Hallo, ich bin Bianca Kopetzki, Mama, Kinderanimateurin und ausgebildete Fachkraft im Kinderbereich.
-          Es gibt für mich kaum etwas Schöneres als das Lachen von Kindern.
-        </p>
-
-        <p>
-          Als Mutter weiß ich, wie wichtig es ist, dass Kinder sich wohlfühlen, Spaß haben
-          und ihren besonderen Tag unbeschwert genießen können.
-        </p>
-
-        <p>
-          Dank meiner Ausbildungen im Bereich Kinderpädagogik und Kinderbetreuung habe ich das nötige Fachwissen,
-          um meine Angebote altersgerecht und sicher zu gestalten.
-        </p>
-
-        <p>
-          Ich freue mich darauf, eure Feier mit Herz, Spaß und ganz viel guter Laune zu einem unvergesslichen Erlebnis
-          zu machen.
-        </p>
-
-        <p class="pricing-lead">
-          Jede Feier ist einzigartig – deshalb erstelle ich dir ein Angebot, das perfekt zu euren Wünschen passt.
-        </p>
-
-        <div class="pricing-note">
-          <strong>So geht’s:</strong> Einfach auf den Button "Jetzt anfragen" klicken und unverbindlich ein Angebot einholen.
+    <section class="about">
+      <div class="about-card">
+        <div class="about-media">
+          <img class="about-img" src="Bianca.jpg" alt="Bianca" />
         </div>
 
-        <div class="about-actions">
-          <a class="btn" href="./leistungen.html">Leistungen ansehen</a>
-          <a class="btn btn-ghost" href="./anfrage.html">Jetzt anfragen</a>
+        <div class="about-content">
+          <h2>Über mich</h2>
+
+          <p><strong>Hallo, ich bin Bianca Kopetzki, Mama, Kinderanimateurin und ausgebildete Fachkraft im Kinderbereich.</strong> Es gibt für mich kaum etwas Schöneres als das Lachen von Kindern.</p>
+
+          <p>Als Mutter weiß ich, wie wichtig es ist, dass Kinder sich wohlfühlen, Spaß haben und ihren besonderen Tag unbeschwert genießen können.</p>
+
+          <p>Dank meiner Ausbildungen im Bereich Kinderpädagogik und Kinderbetreuung habe ich das nötige Fachwissen, um meine Angebote altersgerecht und sicher zu gestalten.</p>
+
+          <p>Ich freue mich darauf, eure Feier mit Herz, Spaß und ganz viel guter Laune zu einem unvergesslichen Erlebnis zu machen.</p>
+
+          <p>Jede Feier ist einzigartig – deshalb erstelle ich dir ein Angebot, das perfekt zu euren Wünschen passt.</p>
+
+          <p class="howto">
+            <strong>So geht’s:</strong>
+            Einfach auf den Button „Jetzt anfragen“ klicken und unverbindlich ein Angebot einholen.
+          </p>
+
+          <!-- ✅ HIER sind die Buttons -->
+          <div class="about-actions">
+            <a class="btn btn-primary" href="./leistungen.html">Leistungen ansehen</a>
+            <a class="btn btn-secondary" href="./anfrage.html">Jetzt anfragen</a>
+          </div>
+
         </div>
       </div>
-
-    </div>
-  </section>
-</main>
-
-
-
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="wrap">
-      <small>© <span id="year"></span> Bianca´s Kinderanimation • <a href="impressum.html">Impressum</a> • <a href="datenschutz.html">Datenschutz</a></small>
+      <small>
+        © <span id="year"></span> Bianca´s Kinderanimation •
+        <a href="./impressum.html">Impressum</a> •
+        <a href="./datenschutz.html">Datenschutz</a> •
+        <a href="./agb.html">AGB</a>
+      </small>
     </div>
   </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".header a");
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
-    });
-  });
-});
-</script>
-
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav a");
-  const current = location.pathname.split("/").pop() || "index.html";
-
-  links.forEach(a => {
-    const href = a.getAttribute("href").split("/").pop();
-    if (href === current) a.classList.add("active");
-    else a.classList.remove("active");
-  });
-});
-</script>
-
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
