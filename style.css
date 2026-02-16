@@ -1237,3 +1237,12 @@ html, body{
     border-radius: 18px;
   }
 }
+/* ===== Mobile Anpassung ===== */
+@media (max-width: 768px){
+  .brand p{
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    margin-top: 6px;
+  }
+}
+
