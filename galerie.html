@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie – Biancas Kinderanimation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+
+<body class="page-galerie">
+
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Bianca´s Kinderanimation</h1>
+        <p>Kinderanimation für Geburtstage & Events</p>
+      </div>
+
+      <nav class="nav">
+        <a href="./uebermich.html">Über mich</a>
+        <a href="./leistungen.html">Leistungen</a>
+        <a href="./feedback.html">Feedback</a>
+        <a href="./galerie.html" class="active">Galerie</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page-content">
+
+    <section class="card">
+      <h2>✨ Galerie</h2>
+      <p>Ein paar Eindrücke von meinen vergangenen Events und Zeitungsbeiträgen.</p>
+
+      <div class="gallery">
+
+  <figure class="gallery-item">
+    <img src="BANI.jpeg" alt="Kinderschminken" onclick="openLightbox(this)">
+    <figcaption>
+      <a href="https://www.noen.at/gaenserndorf/faschingstreiben-kindermaskenball-begeisterte-in-hohenau-an-der-march-510651284?utm_term=Autofeed&utm_medium=Social&utm_source=Facebook&fbclid=IwY2xjawQBrgxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEelcXkTZLaZzClKtnbynG73_ZYufiYD70NCbnHVPm3b_eGGFV8xsQl3VmjmRg_aem_fQwXn0lIqYVdyZPVRpwv0A#Echobox=1771356551" target="_blank">
+        🔗 Zum Beitrag
+      </a>
+    </figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+    <img src="BANI2.jpeg" alt="Luftballonfiguren" onclick="openLightbox(this)">
+    <figcaption>
+      <a href="https://m.noen.at/mistelbach/kindermaskenball-bunte-kostueme-und-spiele-sorgen-fuer-spass-in-rabensburg-507168261?utm_term=Autofeed&utm_medium=Social&utm_source=Facebook&fbclid=IwdGRzaAPlgQZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR5FWQS0EtkJme1hPExGEXbeCeqIyKGUGRuvRfcBm1HbBN9kM7aHDFwPYDRZIg_aem_Oc1OdgBamqubMdDciWf5_w&sfnsn=wa" target="_blank">
+        🔗 Zum Beitrag
+      </a>
+    </figcaption>
+  </figure>
+
+</div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    function openLightbox(img){
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = img.src;
+    }
+
+    function closeLightbox(){
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+<footer class="footer">
+  <div class="wrap">
+    <small>
+      © 2026 Bianca´s Kinderanimation •
+      <a href="./impressum.html">Impressum</a> •
+      <a href="./datenschutz.html">Datenschutz</a> •
+      <a href="./agb.html">AGB</a>
+    </small>
+  </div>
+</footer>
+</body>
+</html>
