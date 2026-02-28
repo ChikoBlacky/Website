@@ -1358,10 +1358,10 @@ html, body{
   margin-top: 20px;
 }
 
-.gallery img{
-  border-radius: 18px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.gallery-item{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;   /* <<< Abstand zwischen Bild und Button */
 }
 
 .gallery img:hover{
