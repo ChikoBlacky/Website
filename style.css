@@ -1431,3 +1431,23 @@ html, body{
   object-fit: contain;
   display: block;
 }
+
+
+@media (max-width: 768px) {
+  .titel {
+    font-size: 28px;
+  }
+
+  .angebot-text {
+    font-size: 20px;
+  }
+
+  .hase {
+    width: 60px;
+    height: 60px;
+  }
+
+  .angebot-banner {
+    gap: 12px;
+  }
+}
