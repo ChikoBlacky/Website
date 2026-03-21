@@ -1400,33 +1400,34 @@ html, body{
 
 .angebot-wrapper {
   text-align: center;
-  margin-top: 20px;
+  margin: 30px 0;
 }
 
 .titel {
   color: green;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .angebot-banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 .angebot-text {
   font-size: 30px;
   font-weight: 800;
   color: #111827;
+  margin: 0;
 }
 
 .hase {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+  display: block;
 }
