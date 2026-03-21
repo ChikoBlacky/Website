@@ -1386,3 +1386,47 @@ html, body{
   max-height: 85%;
   border-radius: 20px;
 }
+.angebot-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.titel {
+  color: green;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.angebot-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.titel {
+  color: green;
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.angebot-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.angebot-text {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.hase {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+}
