@@ -1434,20 +1434,17 @@ html, body{
 
 
 @media (max-width: 768px) {
-  .titel {
-    font-size: 28px;
+  .angebot-banner {
+    gap: 6px;
   }
 
   .angebot-text {
     font-size: 20px;
+    line-height: 1.3;
   }
 
   .hase {
-    width: 60px;
-    height: 60px;
-  }
-
-  .angebot-banner {
-    gap: 12px;
+    width: 42px;
+    height: 42px;
   }
 }
