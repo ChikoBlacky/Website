@@ -1424,27 +1424,121 @@ html, body{
   color: #111827;
   margin: 0;
 }
+/* ============================= */
+/* Reitgut Angebot               */
+/* ============================= */
 
-.hase {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  display: block;
+.reitgut-feature{
+  max-width: 1280px;
+  margin: 14px auto 8px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: center;
+  background: linear-gradient(135deg, #eaf8ff, #ffe9f7);
+  border-radius: 30px;
+  box-shadow: 0 18px 45px rgba(70, 40, 100, .14);
 }
 
+.reitgut-image{
+  width: 100%;
+  height: 230px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.16);
+}
 
-@media (max-width: 768px) {
-  .angebot-banner {
-    gap: 6px;
+.reitgut-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reitgut-content{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.reitgut-badge{
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.65);
+  color: #8b5cf6;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(139,92,246,0.15);
+  margin-bottom: 8px;
+}
+
+.reitgut-content h3{
+  font-size: 1.4rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.reitgut-content p{
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(15,23,42,0.82);
+  margin: 0 0 14px;
+}
+
+.reitgut-btn{
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+  color: #fff;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  box-shadow: 0 14px 30px rgba(139,92,246,0.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.reitgut-btn::after{
+  content: "→";
+}
+
+.reitgut-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(139,92,246,0.45);
+}
+
+.page-leistungen .page-content{
+  padding-top: 0;
+}
+
+@media (max-width: 800px){
+  .reitgut-feature{
+    grid-template-columns: 1fr;
+    margin: 20px 14px 8px;
+    padding: 20px;
   }
 
-  .angebot-text {
-    font-size: 20px;
-    line-height: 1.3;
+  .reitgut-content{
+    text-align: center;
+    align-items: center;
   }
 
-  .hase {
-    width: 42px;
-    height: 42px;
+  .reitgut-btn{
+    align-self: center;
+  }
+
+  .reitgut-image{
+    height: 220px;
   }
 }
