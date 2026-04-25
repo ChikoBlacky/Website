@@ -1542,3 +1542,18 @@ html, body{
     height: 220px;
   }
 }
+.page-angebote .reitgut-feature {
+  margin-bottom: 18px !important;
+}
+
+.page-angebote .page-content {
+  padding-top: 0 !important;
+}
+.page-angebote .reitgut-feature{
+  margin-top: 40px !important;
+}
+.page-angebote .card{
+  background: linear-gradient(135deg, #eaf8ff, #ffe9f7) !important;
+  border-radius: 30px;
+  box-shadow: 0 18px 45px rgba(70, 40, 100, .14);
+}
