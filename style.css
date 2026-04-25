@@ -191,7 +191,7 @@ html{
 
 /* Active per body class */
 .page-übermich  .nav a[href$="uebermich.html"],
-.page-leistungen .nav a[href$="angebote.html"],
+.page-angebote .nav a[href$="angebote.html"],
 .page-feedback   .nav a[href$="feedback.html"],
 .page-galerie    .nav a[href$="galerie.html"]{
   background: var(--ink) !important;
