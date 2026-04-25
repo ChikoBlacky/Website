@@ -191,7 +191,7 @@ html{
 
 /* Active per body class */
 .page-übermich  .nav a[href$="uebermich.html"],
-.page-leistungen .nav a[href$="leistungen.html"],
+.page-leistungen .nav a[href$="angebote.html"],
 .page-feedback   .nav a[href$="feedback.html"],
 .page-galerie    .nav a[href$="galerie.html"]{
   background: var(--ink) !important;
@@ -1068,18 +1068,18 @@ html{
 /* LEISTUNGEN – Card + Grid      */
 /* ============================= */
 
-.leistungen-card .muted{
+.angebot-card .muted{
   margin: 0 0 18px;
   opacity: .85;
 }
 
-.leistungen-grid{
+.angebot-grid{
   display: grid;
   gap: 14px;
   margin-top: 12px;
 }
 
-.leistung{
+.angebot{
   padding: 18px;
   border-radius: 18px;
   background: rgba(241, 223, 223, 0.72);
@@ -1089,19 +1089,19 @@ html{
   -webkit-backdrop-filter: blur(10px);
 }
 
-.leistung h3{
+.angebot h3{
   margin: 0 0 8px;
   font-size: 1.1rem;
   letter-spacing: -0.01em;
 }
 
-.leistung p{
+.angebot p{
   margin: 0;
   color: rgba(15,23,42,0.86);
   line-height: 1.75;
 }
 
-.leistungen-cta{
+.angebot-cta{
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -1110,7 +1110,7 @@ html{
 
 /* Desktop Grid */
 @media (min-width: 1024px){
-  .leistungen-grid{
+  .angebot-grid{
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
   }
