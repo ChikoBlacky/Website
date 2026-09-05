@@ -193,7 +193,7 @@ html{
 .page-uebermich .nav a[href$="uebermich.html"],
 .page-angebote .nav a[href$="angebote.html"],
 .page-feedback .nav a[href$="feedback.html"],
-.page-galerie .nav a[href$="galerie.html"],
+.page-events .nav a[href$="events.html"],
 .page-ausbildungen .nav a[href$="Ausbildungen.html"] {
 
     background: var(--ink) !important;
@@ -1132,27 +1132,27 @@ html{
 /* Galerie-Seite (wie Anfrage/Feedback) */
 /* ============================= */
 
-.page-galerie .page-content{
+.page-events .page-content{
   padding: 70px 0;
 }
 
-.page-galerie .galerie-card{
+.page-events .events-card{
   max-width: 980px;          /* schön breit für Bilder */
   margin: 0 auto 80px;
 }
 
 /* Headline/Intro */
-.page-galerie .galerie-card h2{
+.page-events .events-card h2{
   margin: 0 0 12px;
 }
 
-.page-galerie .galerie-card p{
+.page-events .events-card p{
   margin: 0 0 18px;
   opacity: .85;
 }
 
 /* Grid */
-.page-galerie .gallery{
+.page-events .gallery{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
@@ -1160,7 +1160,7 @@ html{
 }
 
 /* Bilder */
-.page-galerie .gallery img{
+.page-events .gallery img{
   width: 100%;
   aspect-ratio: 4 / 3;        /* gleichmäßige Kacheln */
   object-fit: cover;
@@ -1169,13 +1169,13 @@ html{
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.page-galerie .gallery img:hover{
+.page-events .gallery img:hover{
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 14px 34px rgba(0,0,0,0.14);
 }
 
 /* Lightbox */
-.page-galerie .lightbox{
+.page-events .lightbox{
   display: none;
   position: fixed;
   inset: 0;
@@ -1186,7 +1186,7 @@ html{
   padding: 18px;
 }
 
-.page-galerie .lightbox img{
+.page-events .lightbox img{
   max-width: 92vw;
   max-height: 86vh;
   border-radius: 20px;
