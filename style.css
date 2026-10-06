@@ -193,7 +193,7 @@ html{
 .page-uebermich .nav a[href$="uebermich.html"],
 .page-angebote .nav a[href$="angebote.html"],
 .page-feedback .nav a[href$="feedback.html"],
-.page-events .nav a[href$="events.html"],
+.page-events .nav a[href$="Social Media.html"],
 .page-ausbildungen .nav a[href$="Ausbildungen.html"] {
 
     background: var(--ink) !important;
@@ -1132,27 +1132,27 @@ html{
 /* Galerie-Seite (wie Anfrage/Feedback) */
 /* ============================= */
 
-.page-events .page-content{
+.page-Social Media .page-content{
   padding: 70px 0;
 }
 
-.page-events .events-card{
+.page-Social Media .events-card{
   max-width: 980px;          /* schön breit für Bilder */
   margin: 0 auto 80px;
 }
 
 /* Headline/Intro */
-.page-events .events-card h2{
+.page-Social Media .events-card h2{
   margin: 0 0 12px;
 }
 
-.page-events .events-card p{
+.page-Social Media .events-card p{
   margin: 0 0 18px;
   opacity: .85;
 }
 
 /* Grid */
-.page-events .gallery{
+.page-Social Media .gallery{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
@@ -1160,7 +1160,7 @@ html{
 }
 
 /* Bilder */
-.page-events .gallery img{
+.page-Social Media .gallery img{
   width: 100%;
   aspect-ratio: 4 / 3;        /* gleichmäßige Kacheln */
   object-fit: cover;
@@ -1169,13 +1169,13 @@ html{
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.page-events .gallery img:hover{
+.page-Social Media .gallery img:hover{
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 14px 34px rgba(0,0,0,0.14);
 }
 
 /* Lightbox */
-.page-events .lightbox{
+.page-Social Media .lightbox{
   display: none;
   position: fixed;
   inset: 0;
@@ -1186,7 +1186,7 @@ html{
   padding: 18px;
 }
 
-.page-events .lightbox img{
+.page-Social Media .lightbox img{
   max-width: 92vw;
   max-height: 86vh;
   border-radius: 20px;
@@ -1371,6 +1371,14 @@ html, body{
   transform: scale(1.05);
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
+
+.gallery-item img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
 
 /* Lightbox */
 
@@ -1704,4 +1712,58 @@ html, body{
     object-fit:cover;
     border-radius:20px;
     display:block;
+}
+
+.social-media-section {
+  margin-top: 40px;
+  padding: 35px;
+  background: rgba(255,255,255,.85);
+  border-radius: 28px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.social-media-section h2 {
+  margin-bottom: 15px;
+}
+
+.social-media-section p {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+
+.facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  color: white;
 }
